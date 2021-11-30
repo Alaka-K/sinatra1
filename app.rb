@@ -19,5 +19,5 @@ get '/hello/:name/:age' do
   end
 
   get '/cat' do
-    "<div><img src='http://placekitten.com/500/500'></div>"
+    "<div style = 'border: dashed red;'><img src='http://placekitten.com/500/500'></div>"
   end
