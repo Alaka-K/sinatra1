@@ -19,5 +19,5 @@ get '/hello/:name/:age' do
   end
 
   get '/cat' do
-    "<div style = 'border: dashed red;'><img src='http://placekitten.com/500/500'></div>"
+    erb(:index)
   end
