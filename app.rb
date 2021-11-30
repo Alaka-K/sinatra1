@@ -19,5 +19,6 @@ get '/hello/:name/:age' do
   end
 
   get '/cat' do
+    @name = %w(Amigo Misty Almond).sample
     erb(:index) #we are calling the erb method and asking it to render a file called index.erb
   end
