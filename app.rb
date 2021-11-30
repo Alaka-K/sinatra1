@@ -19,5 +19,5 @@ get '/hello/:name/:age' do
   end
 
   get '/cat' do
-    erb(:index)
+    erb(:index) #we are calling the erb method and asking it to render a file called index.erb
   end
