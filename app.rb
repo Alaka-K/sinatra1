@@ -18,13 +18,17 @@ get '/hello/:name/:age' do
     "Hello #{params[:name]} you are #{params[:age]} years today!"
   end
 
-  get '/random-cat' do
-    @name = %w(Amigo Misty Almond).sample
-    erb(:index) #we are calling the erb method and asking it to render a file called index.erb
-  end
+get '/random-cat' do
+  @name = %w(Amigo Misty Almond).sample
+  erb(:index) #we are calling the erb method and asking it to render a file called index.erb
+end
 
-  get '/named-cat' do
-    p params
-    @name = params[:name]
-    erb(:index) #we are calling the erb method and asking it to render a file called index.erb
-  end
+post '/named-cat' do
+  p params
+  @name = @name = params[:name]
+  erb(:index) #we are calling the erb method and asking it to render a file called index.erb
+end
+
+get '/cat-form' do
+  erb(:form)
+end
